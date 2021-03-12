@@ -1,0 +1,13 @@
+<h1>Edit Show</h1>
+
+<%= form_with(model: @show) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title%><br>
+    <%= f.label :year_aired %>
+    <%= f.number_field :year_aired %><br>
+
+    <%= f.submit %>
+
+<% end %>
+
+<%= link_to "Back", :back %>

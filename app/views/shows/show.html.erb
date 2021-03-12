@@ -1,0 +1,20 @@
+<h1><%= @show.title%></h1>
+
+<h4>Year Aired: <%= @show.year_aired%></h4>
+
+<h4>Actors: </h4>
+<% @show.actors.each do |actor|%>
+    <%= link_to actor.name, actor %>
+<%end%>
+<br><br>
+
+<h4>Characters: </h4>
+<% @show.characters.each do |c|%>
+    <%= link_to c.name, c %>
+<%end%>
+<br><br>
+
+<%= link_to "All shows", shows_path %>
+<%= link_to "Back", :back %>
+<%= link_to "Edit", edit_show_path(@show) %>
+<%= link_to "Delete", @show, method: "delete", data: {confirm: "Are you sure?"}  %>

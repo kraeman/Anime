@@ -1,0 +1,14 @@
+<h1>Edit Actor</h1>
+
+<%= form_with(model: @actor) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name%><br>
+    <%= f.label :years_active %>
+    <%= f.number_field :years_active %><br>
+    
+
+    <%= f.submit %>
+
+<% end %>
+
+<%= link_to "Back", :back %>

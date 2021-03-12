@@ -1,0 +1,17 @@
+<h1><%= @character.name%></h1>
+
+<h4>Bio: <%= @character.bio%></h4>
+
+<h4>Show: </h4>
+    <%= link_to @character.show.title, @character.show %>
+<br><br>
+
+<h4>Actor: </h4>
+    <%= link_to @character.actor.name, @character.actor %>
+<br><br>
+
+
+<%= link_to "All characters", characters_path %>
+<%= link_to "Back", :back %>
+<%= link_to "Edit", edit_character_path(@character) %>
+<%= link_to "Delete", @character, method: "delete", data: {confirm: "Are you sure?"}  %>

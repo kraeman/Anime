@@ -1,0 +1,18 @@
+<h1>Edit Character</h1>
+
+<%= form_with(model: @character) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name%><br>
+    <%= f.label :bio %>
+    <%= f.text_field :bio %><br>
+    <%= f.label :actor_id %>
+    <%= f.select :actor_id, options_for_select(@actors, selected: @character.actor_id), include_blank: "Select an availability"%><br>
+    <%= f.label :show_id %>
+    <%= f.select :show_id, options_for_select(@shows, selected: @character.show_id), include_blank: "Select an availability"%><br>
+
+
+    <%= f.submit %>
+
+<% end %>
+
+<%= link_to "Back", :back %>

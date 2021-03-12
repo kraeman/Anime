@@ -1,0 +1,10 @@
+<h1>Characters</h1>
+
+<ul>
+    <% @characters.each do |c|%>
+        <li><%= link_to c.name, c %></li>
+    <% end%>
+</ul>
+
+<%= link_to "Create Character",  new_character_path%>
+<%= link_to "Home",  "/"%>
